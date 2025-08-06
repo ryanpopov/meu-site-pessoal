@@ -1,0 +1,370 @@
+/* ================================================== */
+/* ESTILOS GERAIS (mantidos do original)              */
+/* ================================================== */
+body {
+    font-family: 'Verdana', sans-serif;
+    background-color: #e0f2f7; /* Um azul claro */
+    color: #333; /* Cor de texto padrão */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: 16px; /* Tamanho base da fonte */
+}
+
+main {
+    max-width: 960px; /* Largura máxima do conteúdo */
+    margin: 30px auto 20px; /* Ajuste: +10px no topo para o menu fixo */
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+h1, h2, h3 {
+    color: #1a237e; /* Azul mais escuro para títulos */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem; /* 2.5 vezes o tamanho da fonte raiz */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    padding: 20px 0; /* Espaçamento no header */
+}
+
+h2 {
+    font-size: 2em;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+p {
+    font-family: 'Georgia', serif; /* Outra fonte para parágrafos */
+    margin-bottom: 1em;
+    font-size: 1.1em;
+}
+
+/* ================================================== */
+/* CABEÇALHO E NAVEGAÇÃO (SEÇÃO AJUSTADA) */
+/* Alterações principais:
+   - Cor de fundo alterada para #1a237e (azul escuro)
+   - Altura fixa de 50px
+   - Melhor alinhamento vertical
+   - Texto mais legível com sombra e peso
+   - Padding ajustado
+   - Efeitos de hover refinados
+*/
+/* ================================================== */
+header {
+    background-color: #ffffff;
+    padding: 0; /* Removido padding para controle preciso */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky; /* Mantém o cabeçalho fixo no topo ao rolar */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.main-nav {
+    list-style: none; /* Remove marcadores de lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Transforma em container flex */
+    justify-content: center; /* Centraliza os itens */
+    background-color: #1a237e; /* NOVA COR (azul escuro) */
+    height: 50px; /* ALTURA FIXA */
+}
+
+.main-nav li {
+    display: flex; /* Container flex para alinhamento */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.main-nav li a {
+    display: block; /* Faz o link ocupar todo o espaço do item da lista */
+    color: white;
+    text-align: center;
+    padding: 15px 25px; /* PADDING AJUSTADO */
+    text-decoration: none;
+    transition: all 0.3s ease; /* Transição suave ao passar o mouse */
+    font-weight: 500; /* TEXTO MAIS FORTE */
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* MELHORA LEGIBILIDADE */
+}
+
+.main-nav li a:hover {
+    background-color: #303f9f; /* COR DE HOVER AJUSTADA */
+    text-decoration: none;
+}
+
+/* ================================================== */
+/* DEMAIS SEÇÕES (mantidas do original) */
+/* ================================================== */
+
+/* Seção de Introdução (Sobre Mim) */
+.intro-section {
+    padding: 20px;
+    text-align: justify;
+}
+
+.foto-perfil {
+    float: right; /* Flutua a imagem para a direita */
+    margin-left: 20px; /* Adiciona margem à esquerda para separar do texto */
+    margin-bottom: 10px;
+    border: 3px solid #007bff; /* Borda azul para a imagem */
+    padding: 5px;
+    box-sizing: border-box; /* Inclui padding e border no tamanho total */
+    border-radius: 50%; /* Torna a imagem redonda */
+    max-width: 180px; /* Garante que a imagem não seja muito grande */
+    height: auto; /* Mantém a proporção */
+}
+
+/* Limpa o float após o conteúdo */
+.intro-section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.paragrafo-destaque {
+    font-weight: bold;
+    color: #c0392b; /* Vermelho escuro para destaque */
+    background-color: #ffebee;
+    padding: 10px;
+    border-left: 5px solid #c0392b;
+    margin-top: 20px;
+}
+
+/* Linha horizontal */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    margin: 30px 0;
+}
+
+/* Links e Listas */
+.links-e-listas {
+    padding: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+ul, ol {
+    list-style-position: inside; /* Garante que os marcadores fiquem dentro do padding */
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+ul li {
+    background-color: #f9f9f9;
+    margin: 5px 0;
+    padding: 8px;
+    border-left: 4px solid #4CAF50;
+    border-radius: 4px;
+}
+ul li:nth-child(even) { /* Estiliza itens pares com cor diferente */
+    background-color: #eff5ef;
+    border-left: 4px solid #28a745;
+}
+
+ol li {
+    margin: 5px 0;
+    padding: 5px;
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove o espaço entre as bordas das células */
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #555;
+    font-weight: bold;
+}
+
+tr:nth-child(even) { /* Estiliza linhas pares da tabela */
+    background-color: #f9f9f9;
+}
+
+tr:hover { /* Efeito ao passar o mouse sobre as linhas */
+    background-color: #f1f1f1;
+}
+
+/* Flexbox - Interesses */
+.interesses-container {
+    display: flex; /* Transforma em container flex */
+    justify-content: space-around; /* Distribui os itens com espaço entre eles */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha se não houver espaço */
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.interesse-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    flex: 1; /* Faz com que os itens tentem ocupar o mesmo espaço */
+    min-width: 280px; /* Largura mínima para cada item */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.destaque-interesse {
+    flex-grow: 2; /* Faz com que este item cresça o dobro dos outros */
+    background-color: #e6ffe6; /* Cor de fundo diferente para destacar */
+    border-color: #28a745;
+}
+
+/* Formulário de Contato */
+.contact-form {
+    background-color: #fdfdfd;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block; /* Faz o label ocupar sua própria linha */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: calc(100% - 22px); /* 100% menos o padding e borda */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Inclui padding e border no tamanho total */
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    display: block; /* Faz o botão ocupar a largura total */
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px; /* Espaço acima do rodapé */
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0;
+    color: #ccc;
+}
+
+/* ================================================== */
+/* RESPONSIVIDADE (Media Queries) */
+/* ================================================== */
+
+/* Telas menores que 768px (tablets e celulares grandes) */
+@media (max-width: 768px) {
+    /* Ajustes para o menu de navegação */
+    .main-nav {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        height: auto; /* Altura automática */
+    }
+    .main-nav li a {
+        padding: 12px 20px; /* Padding ajustado para mobile */
+    }
+    
+    /* Demais ajustes originais */
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+    .interesse-item {
+        min-width: 100%;
+        margin: 10px 0;
+    }
+    .foto-perfil {
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto;
+        border-radius: 8px;
+    }
+    .intro-section {
+        text-align: left;
+    }
+    .intro-section::after {
+        clear: none;
+    }
+}
+
+/* Telas muito pequenas, menores que 480px (celulares) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+    p {
+        font-size: 1em;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+    }
+}
